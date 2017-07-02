@@ -1,1 +1,16 @@
-This is a git repo!
+This is a html based proxy.
+Submitted 3/12/2017.
+
+/**********************************How to Run**********************************/
+1-make Makefile
+./proxy.c
+    
+2-Open your browser, and set up a proxy connection using any port with a large number (I used 15000 to be absolutely safe;your connection might be blocked if you don't have access). This program opens up a socket for the server, and listens for incoming connections to that port number. If something connects to it (in this case typing an address into the search bar), it will read the request of the web browser, parse the information for readily use(in my case I used brute force instead of using more effective functions b/c I didn't 100% know how to use it),and store it into a log file. This program then opens a socket for the client and connects to the internet and writes the request message. Then it reads the response and sends that information to the server, which then forwards it to the client(in this case the web browser). There are many bugs that I couldn't figure out how to fix or make perfect, but for simple uses and websites, this program should work.
+/******************************************************************************/
+
+To Do:(7/2/2017)
+1-load all HTML, brush up code
+2-add error handling/dumping
+3-implement concurrency using processes
+4-implement POST
+5-add caching
